@@ -62,8 +62,6 @@ CREATE TABLE `userinfo` (
                                 <li><a href="#model" data-toggle="tab">Model</a></li>
                                 <li><a href="#mybatis" data-toggle="tab">Mybatis</a></li>
                                 <li><a href="#dao" data-toggle="tab">Dao</a></li>
-                                <li><a href="#repo_impl" data-toggle="tab">RepoImpl</a></li>
-                                <li><a href="#repo" data-toggle="tab">Repo</a></li>
                                 <li><a href="#service_impl" data-toggle="tab">ServiceImpl</a></li>
                                 <li><a href="#service" data-toggle="tab">Service</a></li>
                                 <li class="active" ><a href="#controller" data-toggle="tab">Controller</a></li>
@@ -83,16 +81,6 @@ CREATE TABLE `userinfo` (
                                 <div class="chart tab-pane active" id="service_impl">
                                     <div class="box-body">
                                         ServiceImpl：<textarea id="service_impl_ide" ></textarea>
-                                    </div>
-                                </div>
-                                <div class="chart tab-pane active" id="repo">
-                                    <div class="box-body">
-                                        Repo：<textarea id="repo_ide" ></textarea>
-                                    </div>
-                                </div>
-                                <div class="chart tab-pane active" id="repo_impl">
-                                    <div class="box-body">
-                                        RepoImpl：<textarea id="repo_impl_ide" ></textarea>
                                     </div>
                                 </div>
                                 <div class="chart tab-pane active" id="dao">

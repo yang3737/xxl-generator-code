@@ -25,8 +25,6 @@ $(function () {
     var controller_ide;
     var service_ide;
     var service_impl_ide;
-    var repo_ide;
-    var repo_impl_ide;
     var dao_ide;
     var mybatis_ide;
     var model_ide;
@@ -68,30 +66,6 @@ $(function () {
             gutters:["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
         });
         service_impl_ide.setSize('auto','auto');
-
-        // service_ide
-        repo_ide = CodeMirror.fromTextArea(document.getElementById("repo_ide"), {
-            lineNumbers: true,
-            matchBrackets: true,
-            mode: "text/x-java",
-            lineWrapping:true,
-            readOnly:true,
-            foldGutter: true,
-            gutters:["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-        });
-        repo_ide.setSize('auto','auto');
-
-        // repo
-        repo_impl_ide = CodeMirror.fromTextArea(document.getElementById("repo_impl_ide"), {
-            lineNumbers: true,
-            matchBrackets: true,
-            mode: "text/x-java",
-            lineWrapping:true,
-            readOnly:true,
-            foldGutter: true,
-            gutters:["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-        });
-        repo_impl_ide.setSize('auto','auto');
 
         // dao_ide
         dao_ide = CodeMirror.fromTextArea(document.getElementById("dao_ide"), {
@@ -171,8 +145,8 @@ $(function () {
                             service_impl_ide.setValue(data.data.service_impl_code);
                             service_impl_ide.setSize('auto','auto');
 
-                            repo_ide.setValue(data.data.repo_code);
-                            repo_impl_ide.setValue(data.data.repo_impl_code);
+                            //repo_ide.setValue(data.data.repo_code);
+                            //repo_impl_ide.setValue(data.data.repo_impl_code);
 
                             dao_ide.setValue(data.data.dao_code);
                             dao_ide.setSize('auto','auto');

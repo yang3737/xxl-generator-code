@@ -29,6 +29,10 @@ public class IndexController {
     @Resource
     private FreemarkerTool freemarkerTool;
 
+    private String domainPackage="cn.gov.zcy.experts.domain.expert";
+
+    private String daoPackage="cn.gov.zcy.experts.dao.expert";
+
     @RequestMapping("/")
     public String index() {
         return "index";
@@ -50,6 +54,8 @@ public class IndexController {
             // code generate
             Map<String, Object> params = new HashMap<String, Object>();
             params.put("classInfo", classInfo);
+            params.put("domainPackage",domainPackage);
+            params.put("daoPackage",daoPackage);
 
             // result
             Map<String, String> result = new HashMap<String, String>();

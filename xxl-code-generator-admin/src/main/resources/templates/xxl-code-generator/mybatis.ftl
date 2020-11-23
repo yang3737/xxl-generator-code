@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mf.code.thirdpay.repo.dao.${classInfo.className}Mapper">
+<mapper namespace="${daoPackage}.${classInfo.className}Dao">
 
-    <resultMap id="${classInfo.className}Mapper" type="mf.code.thirdpay.repo.po.${classInfo.className}" >
+    <resultMap id="${classInfo.className}Mapper" type="${domainPackage}.${classInfo.className}Domain" >
         <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
             <#list classInfo.fieldList as fieldItem >
                 <result column="${fieldItem.columnName}" property="${fieldItem.fieldName}" jdbcType="${fieldItem.jdbcType}" />
@@ -19,7 +19,7 @@
         </#if>
     </sql>
 
-    <insert id="insertSelective" parameterType="mf.code.thirdpay.repo.po.${classInfo.className}" >
+    <insert id="insert" parameterType="${domainPackage}.${classInfo.className}Domain" >
         INSERT INTO ${classInfo.tableName}
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
@@ -47,12 +47,12 @@
 
     </insert>
 
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <delete id="delete" parameterType="java.lang.Long">
         DELETE FROM ${classInfo.tableName}
         WHERE `id` = ${r"#{id}"}
     </delete>
 
-    <update id="updateByPrimaryKeySelective" parameterType="mf.code.thirdpay.repo.po.${classInfo.className}" >
+    <update id="update" parameterType="${domainPackage}.${classInfo.className}Domain" >
         UPDATE ${classInfo.tableName}
         <set>
             <#list classInfo.fieldList as fieldItem >
@@ -66,13 +66,13 @@
     </update>
 
 
-    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="${classInfo.className}Mapper">
+    <select id="selectById" parameterType="java.lang.Long" resultMap="${classInfo.className}Mapper">
         SELECT <include refid="Base_Column_List" />
         FROM ${classInfo.tableName}
         WHERE `id` = ${r"#{id}"}
     </select>
 
-    <select id="find${classInfo.className}List" parameterType="mf.code.thirdpay.repo.po.${classInfo.className}" resultMap="${classInfo.className}Mapper">
+    <select id="find${classInfo.className}List" parameterType="${domainPackage}.${classInfo.className}Domain" resultMap="${classInfo.className}Mapper">
         SELECT <include refid="Base_Column_List" />
         FROM ${classInfo.tableName}
         <where>
