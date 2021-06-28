@@ -1,501 +1,661 @@
-2020-10-12 17:01:34,364 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on localhost with PID 2534 (/Users/louchaoyang/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by louchaoyang in /Users/louchaoyang/ideaspace/xxl-generator-code)
-2020-10-12 17:01:34,367 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-10-12 17:01:34,396 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1721e9ad: startup date [Mon Oct 12 17:01:34 CST 2020]; root of context hierarchy
-2020-10-12 17:01:34,460 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-10-12 17:01:35,161 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-10-12 17:01:35,167 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-10-12 17:01:35,167 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-10-12 17:01:35,208 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-10-12 17:01:35,208 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 812 ms
-2020-10-12 17:01:35,277 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-10-12 17:01:35,279 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-10-12 17:01:35,280 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-10-12 17:01:35,280 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-10-12 17:01:35,280 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-10-12 17:01:35,364 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-10-12 17:01:35,620 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1721e9ad: startup date [Mon Oct 12 17:01:34 CST 2020]; root of context hierarchy
-2020-10-12 17:01:35,678 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-10-12 17:01:35,679 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-10-12 17:01:35,681 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-10-12 17:01:35,681 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-10-12 17:01:35,701 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-10-12 17:01:35,701 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-10-12 17:01:35,721 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-10-12 17:01:35,798 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-10-12 17:01:35,828 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-10-12 17:01:35,844 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-10-12 17:01:35,852 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-10-12 17:01:35,872 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-10-12 17:01:35,887 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-10-12 17:01:35,892 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 1.679 seconds (JVM running for 2.273)
-2020-11-23 10:07:16,858 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40068 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:07:16,869 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:07:16,977 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@20262bd8: startup date [Mon Nov 23 10:07:16 CST 2020]; root of context hierarchy
-2020-11-23 10:07:16,990 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:07:19,341 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:07:19,349 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:07:19,350 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:07:19,409 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:07:19,409 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 2432 ms
-2020-11-23 10:07:19,522 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:07:19,526 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:07:19,527 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:07:19,527 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:07:19,527 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:07:19,676 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:07:19,957 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@20262bd8: startup date [Mon Nov 23 10:07:16 CST 2020]; root of context hierarchy
-2020-11-23 10:07:20,014 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:07:20,015 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:07:20,018 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:07:20,019 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:07:20,049 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:07:20,049 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:07:20,082 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:07:20,202 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:07:20,274 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:07:20,290 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:07:20,297 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:07:20,315 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:07:20,329 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:07:20,333 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 3.909 seconds (JVM running for 6.079)
-2020-11-23 10:07:34,262 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:07:34,263 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:07:34,283 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
-2020-11-23 10:07:44,601 INFO [http-nio-8070-exec-8] c.x.c.a.controller.IndexController [IndexController.java : 77] 生成代码行数：507
-2020-11-23 10:29:57,904 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@20262bd8: startup date [Mon Nov 23 10:07:16 CST 2020]; root of context hierarchy
-2020-11-23 10:29:57,946 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:30:06,748 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40303 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:30:06,753 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:30:06,794 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c28e40: startup date [Mon Nov 23 10:30:06 CST 2020]; root of context hierarchy
-2020-11-23 10:30:07,030 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:30:07,956 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:30:07,964 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:30:07,965 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:30:08,036 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:30:08,037 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1243 ms
-2020-11-23 10:30:08,120 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:30:08,123 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:30:08,124 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:30:08,124 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:30:08,124 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:30:08,248 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:30:08,465 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c28e40: startup date [Mon Nov 23 10:30:06 CST 2020]; root of context hierarchy
-2020-11-23 10:30:08,507 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:30:08,508 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:30:08,511 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:30:08,511 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:30:08,533 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:30:08,533 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:30:08,556 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:30:08,635 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:30:08,677 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:30:08,695 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:30:08,702 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:30:08,726 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:30:08,744 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:30:08,751 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 2.203 seconds (JVM running for 3.502)
-2020-11-23 10:34:11,104 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c28e40: startup date [Mon Nov 23 10:30:06 CST 2020]; root of context hierarchy
-2020-11-23 10:34:11,120 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:34:17,065 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40347 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:34:17,068 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:34:17,112 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1721e9ad: startup date [Mon Nov 23 10:34:17 CST 2020]; root of context hierarchy
-2020-11-23 10:34:17,278 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:34:18,232 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:34:18,238 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:34:18,239 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:34:18,284 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:34:18,284 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1172 ms
-2020-11-23 10:34:18,363 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:34:18,367 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:34:18,367 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:34:18,367 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:34:18,368 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:34:18,443 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:34:18,640 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1721e9ad: startup date [Mon Nov 23 10:34:17 CST 2020]; root of context hierarchy
-2020-11-23 10:34:18,672 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:34:18,673 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:34:18,675 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:34:18,676 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:34:18,694 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:34:18,695 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:34:18,715 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:34:18,793 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:34:18,825 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:34:18,836 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:34:18,841 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:34:18,856 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:34:18,866 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:34:18,869 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 1.954 seconds (JVM running for 2.938)
-2020-11-23 10:35:09,916 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:35:09,917 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:35:09,935 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
-2020-11-23 10:35:21,742 INFO [http-nio-8070-exec-7] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：460
-2020-11-23 10:38:46,199 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1721e9ad: startup date [Mon Nov 23 10:34:17 CST 2020]; root of context hierarchy
-2020-11-23 10:38:46,211 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:38:54,810 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40395 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:38:54,811 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:38:54,842 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@96bdf0c: startup date [Mon Nov 23 10:38:54 CST 2020]; root of context hierarchy
-2020-11-23 10:38:54,918 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:38:55,692 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:38:55,697 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:38:55,698 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:38:55,751 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:38:55,751 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 909 ms
-2020-11-23 10:38:55,832 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:38:55,834 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:38:55,835 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:38:55,835 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:38:55,835 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:38:55,911 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:38:56,196 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@96bdf0c: startup date [Mon Nov 23 10:38:54 CST 2020]; root of context hierarchy
-2020-11-23 10:38:56,231 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:38:56,234 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:38:56,236 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:38:56,236 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:38:56,257 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:38:56,257 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:38:56,278 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:38:56,369 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:38:56,422 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:38:56,452 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:38:56,464 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:38:56,491 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:38:56,510 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:38:56,518 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 1.843 seconds (JVM running for 6.907)
-2020-11-23 10:39:01,180 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:39:01,182 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:39:01,205 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
-2020-11-23 10:40:58,382 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@96bdf0c: startup date [Mon Nov 23 10:38:54 CST 2020]; root of context hierarchy
-2020-11-23 10:40:58,388 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:41:04,183 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40418 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:41:04,186 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:41:04,255 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@354c0438: startup date [Mon Nov 23 10:41:04 CST 2020]; root of context hierarchy
-2020-11-23 10:41:04,330 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:41:05,504 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:41:05,512 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:41:05,513 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:41:05,576 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:41:05,577 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1323 ms
-2020-11-23 10:41:05,721 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:41:05,724 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:41:05,724 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:41:05,724 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:41:05,725 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:41:05,835 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:41:06,099 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@354c0438: startup date [Mon Nov 23 10:41:04 CST 2020]; root of context hierarchy
-2020-11-23 10:41:06,146 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:41:06,147 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:41:06,148 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:41:06,149 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:41:06,166 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:41:06,166 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:41:06,186 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:41:06,271 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:41:06,316 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:41:06,331 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:41:06,335 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:41:06,357 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:41:06,370 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:41:06,376 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 2.405 seconds (JVM running for 3.68)
-2020-11-23 10:41:13,358 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:41:13,359 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:41:13,373 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
-2020-11-23 10:41:15,841 INFO [http-nio-8070-exec-3] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：339
-2020-11-23 10:41:25,329 INFO [http-nio-8070-exec-6] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：415
-2020-11-23 10:43:11,549 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@354c0438: startup date [Mon Nov 23 10:41:04 CST 2020]; root of context hierarchy
-2020-11-23 10:43:11,564 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:43:19,920 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40435 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:43:19,922 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:43:19,952 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e8375c7: startup date [Mon Nov 23 10:43:19 CST 2020]; root of context hierarchy
-2020-11-23 10:43:20,035 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:43:20,766 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:43:20,773 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:43:20,774 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:43:20,816 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:43:20,816 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 864 ms
-2020-11-23 10:43:20,893 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:43:20,896 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:43:20,896 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:43:20,896 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:43:20,896 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:43:20,966 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:43:21,307 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e8375c7: startup date [Mon Nov 23 10:43:19 CST 2020]; root of context hierarchy
-2020-11-23 10:43:21,341 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:43:21,342 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:43:21,344 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:43:21,345 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:43:21,362 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:43:21,362 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:43:21,383 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:43:21,459 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:43:21,492 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:43:21,502 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:43:21,507 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:43:21,527 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:43:21,540 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:43:21,546 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 1.757 seconds (JVM running for 6.807)
-2020-11-23 10:43:26,352 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:43:26,353 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:43:26,364 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
-2020-11-23 10:43:26,496 INFO [http-nio-8070-exec-1] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 10:45:44,945 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e8375c7: startup date [Mon Nov 23 10:43:19 CST 2020]; root of context hierarchy
-2020-11-23 10:45:44,949 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:45:49,538 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40480 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:45:49,540 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:45:49,571 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@96bdf0c: startup date [Mon Nov 23 10:45:49 CST 2020]; root of context hierarchy
-2020-11-23 10:45:49,658 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:45:50,369 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:45:50,375 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:45:50,375 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:45:50,419 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:45:50,419 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 848 ms
-2020-11-23 10:45:50,496 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:45:50,499 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:45:50,499 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:45:50,499 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:45:50,499 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:45:50,567 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:45:50,824 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@96bdf0c: startup date [Mon Nov 23 10:45:49 CST 2020]; root of context hierarchy
-2020-11-23 10:45:50,862 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:45:50,863 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:45:50,865 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:45:50,865 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:45:50,882 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:45:50,882 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:45:50,901 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:45:50,981 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:45:51,013 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:45:51,024 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:45:51,030 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:45:51,050 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:45:51,063 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:45:51,068 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 1.666 seconds (JVM running for 3.671)
-2020-11-23 10:46:14,400 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:46:14,402 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:46:14,415 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
-2020-11-23 10:46:31,253 INFO [http-nio-8070-exec-7] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 10:48:23,493 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@96bdf0c: startup date [Mon Nov 23 10:45:49 CST 2020]; root of context hierarchy
-2020-11-23 10:48:23,497 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:48:27,164 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40505 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:48:27,166 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:48:27,195 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7cbb7d7e: startup date [Mon Nov 23 10:48:27 CST 2020]; root of context hierarchy
-2020-11-23 10:48:27,289 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:48:28,300 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:48:28,306 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:48:28,307 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:48:28,348 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:48:28,348 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1153 ms
-2020-11-23 10:48:28,461 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:48:28,468 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:48:28,469 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:48:28,469 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:48:28,470 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:48:28,574 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:48:28,793 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7cbb7d7e: startup date [Mon Nov 23 10:48:27 CST 2020]; root of context hierarchy
-2020-11-23 10:48:28,826 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:48:28,828 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:48:28,830 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:48:28,830 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:48:28,847 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:48:28,847 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:48:28,867 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:48:28,944 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:48:28,976 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:48:28,987 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:48:28,991 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:48:29,011 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:48:29,023 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:48:29,031 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 1.998 seconds (JVM running for 2.891)
-2020-11-23 10:48:34,854 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:48:34,855 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:48:34,866 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
-2020-11-23 10:50:00,915 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7cbb7d7e: startup date [Mon Nov 23 10:48:27 CST 2020]; root of context hierarchy
-2020-11-23 10:50:00,918 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:50:06,004 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40531 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:50:06,006 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:50:06,035 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7cbb7d7e: startup date [Mon Nov 23 10:50:06 CST 2020]; root of context hierarchy
-2020-11-23 10:50:06,132 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:50:07,398 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:50:07,409 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:50:07,410 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:50:07,477 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:50:07,477 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1442 ms
-2020-11-23 10:50:07,637 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:50:07,642 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:50:07,644 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:50:07,645 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:50:07,645 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:50:07,803 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:50:08,052 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7cbb7d7e: startup date [Mon Nov 23 10:50:06 CST 2020]; root of context hierarchy
-2020-11-23 10:50:08,089 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:50:08,090 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:50:08,092 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:50:08,093 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:50:08,112 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:50:08,112 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:50:08,136 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:50:08,219 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:50:08,256 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:50:08,282 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:50:08,287 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:50:08,311 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:50:08,327 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:50:08,335 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 2.47 seconds (JVM running for 3.254)
-2020-11-23 10:50:15,790 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:50:15,791 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:50:15,826 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
-2020-11-23 10:50:26,763 INFO [http-nio-8070-exec-2] c.x.c.a.controller.IndexController [IndexController.java : 80] 生成代码行数：274
-2020-11-23 10:50:38,008 INFO [http-nio-8070-exec-1] c.x.c.a.controller.IndexController [IndexController.java : 80] 生成代码行数：274
-2020-11-23 10:54:23,310 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7cbb7d7e: startup date [Mon Nov 23 10:50:06 CST 2020]; root of context hierarchy
-2020-11-23 10:54:23,323 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 10:56:08,104 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on zcydeMacBook-Pro.local with PID 40580 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 10:56:08,107 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 10:56:08,145 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@20262bd8: startup date [Mon Nov 23 10:56:08 CST 2020]; root of context hierarchy
-2020-11-23 10:56:08,320 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 10:56:09,345 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 10:56:09,359 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 10:56:09,363 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 10:56:09,431 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 10:56:09,431 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1286 ms
-2020-11-23 10:56:09,542 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 10:56:09,549 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 10:56:09,551 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 10:56:09,551 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 10:56:09,552 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 10:56:09,679 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 10:56:09,918 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@20262bd8: startup date [Mon Nov 23 10:56:08 CST 2020]; root of context hierarchy
-2020-11-23 10:56:09,958 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 10:56:09,959 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 10:56:09,961 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 10:56:09,961 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 10:56:09,989 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:56:09,990 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:56:10,018 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 10:56:10,116 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 10:56:10,169 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 10:56:10,190 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:56:10,198 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 10:56:10,226 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 10:56:10,240 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 10:56:10,245 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 2.336 seconds (JVM running for 7.898)
-2020-11-23 10:56:20,748 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 10:56:20,749 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 10:56:20,765 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
-2020-11-23 10:56:21,005 INFO [http-nio-8070-exec-1] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 11:03:07,542 INFO [http-nio-8070-exec-7] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 11:10:15,763 INFO [Thread-9] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@20262bd8: startup date [Mon Nov 23 10:56:08 CST 2020]; root of context hierarchy
-2020-11-23 11:10:15,780 INFO [Thread-9] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 11:10:19,822 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on localhost with PID 40679 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 11:10:19,824 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 11:10:19,854 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c2f7dfe: startup date [Mon Nov 23 11:10:19 CST 2020]; root of context hierarchy
-2020-11-23 11:10:19,946 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 11:10:21,086 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 11:10:21,097 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 11:10:21,099 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 11:10:21,203 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 11:10:21,203 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1349 ms
-2020-11-23 11:10:21,324 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 11:10:21,329 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 11:10:21,330 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 11:10:21,331 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 11:10:21,331 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 11:10:21,410 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 11:10:21,653 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c2f7dfe: startup date [Mon Nov 23 11:10:19 CST 2020]; root of context hierarchy
-2020-11-23 11:10:21,690 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 11:10:21,691 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 11:10:21,694 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 11:10:21,694 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 11:10:21,714 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:10:21,714 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:10:21,736 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:10:21,820 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 11:10:21,853 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 11:10:21,867 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 11:10:21,873 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 11:10:21,895 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 11:10:21,908 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 11:10:21,914 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 2.23 seconds (JVM running for 2.962)
-2020-11-23 11:10:30,631 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 11:10:30,631 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 11:10:30,644 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
-2020-11-23 11:10:33,652 INFO [http-nio-8070-exec-9] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：298
-2020-11-23 11:10:59,154 INFO [http-nio-8070-exec-8] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 11:12:21,447 INFO [http-nio-8070-exec-9] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 11:12:32,775 INFO [http-nio-8070-exec-5] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 11:13:38,224 INFO [http-nio-8070-exec-3] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：374
-2020-11-23 11:15:55,934 INFO [Thread-13] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c2f7dfe: startup date [Mon Nov 23 11:10:19 CST 2020]; root of context hierarchy
-2020-11-23 11:15:55,949 INFO [Thread-13] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 11:15:59,562 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on localhost with PID 40727 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 11:15:59,563 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 11:15:59,596 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d8c1fa9: startup date [Mon Nov 23 11:15:59 CST 2020]; root of context hierarchy
-2020-11-23 11:15:59,688 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 11:16:01,470 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 11:16:01,497 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 11:16:01,498 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 11:16:02,117 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 11:16:02,118 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 2522 ms
-2020-11-23 11:16:02,522 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 11:16:02,528 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 11:16:02,529 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 11:16:02,530 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 11:16:02,530 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 11:16:02,702 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 11:16:03,061 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d8c1fa9: startup date [Mon Nov 23 11:15:59 CST 2020]; root of context hierarchy
-2020-11-23 11:16:03,101 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 11:16:03,102 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 11:16:03,106 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 11:16:03,107 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 11:16:03,126 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:16:03,126 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:16:03,148 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:16:03,234 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 11:16:03,275 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 11:16:03,288 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 11:16:03,293 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 11:16:03,312 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 11:16:03,324 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 11:16:03,327 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 3.9 seconds (JVM running for 4.738)
-2020-11-23 11:26:13,875 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 11:26:13,877 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 11:26:13,894 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
-2020-11-23 11:26:14,124 INFO [http-nio-8070-exec-1] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：354
-2020-11-23 11:26:37,354 INFO [http-nio-8070-exec-3] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：354
-2020-11-23 11:50:41,953 INFO [http-nio-8070-exec-5] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：373
-2020-11-23 11:50:50,874 INFO [Thread-16] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d8c1fa9: startup date [Mon Nov 23 11:15:59 CST 2020]; root of context hierarchy
-2020-11-23 11:50:50,896 INFO [Thread-16] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
-2020-11-23 11:50:55,357 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on localhost with PID 40990 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
-2020-11-23 11:50:55,360 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
-2020-11-23 11:50:55,396 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c9e160d: startup date [Mon Nov 23 11:50:55 CST 2020]; root of context hierarchy
-2020-11-23 11:50:55,590 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
-2020-11-23 11:50:56,857 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
-2020-11-23 11:50:56,865 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
-2020-11-23 11:50:56,866 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
-2020-11-23 11:50:56,930 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
-2020-11-23 11:50:56,931 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1535 ms
-2020-11-23 11:50:57,052 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
-2020-11-23 11:50:57,055 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-11-23 11:50:57,056 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-11-23 11:50:57,057 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-11-23 11:50:57,057 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
-2020-11-23 11:50:57,162 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2020-11-23 11:50:57,382 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c9e160d: startup date [Mon Nov 23 11:50:55 CST 2020]; root of context hierarchy
-2020-11-23 11:50:57,412 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
-2020-11-23 11:50:57,413 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
-2020-11-23 11:50:57,414 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-11-23 11:50:57,415 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-11-23 11:50:57,431 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:50:57,431 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:50:57,453 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-11-23 11:50:57,530 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
-2020-11-23 11:50:57,562 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
-2020-11-23 11:50:57,573 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
-2020-11-23 11:50:57,577 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
-2020-11-23 11:50:57,595 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
-2020-11-23 11:50:57,604 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
-2020-11-23 11:50:57,607 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 2.396 seconds (JVM running for 3.314)
-2020-11-23 11:51:08,481 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
-2020-11-23 11:51:08,482 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
-2020-11-23 11:51:08,494 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
-2020-11-23 11:51:12,997 INFO [http-nio-8070-exec-6] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：375
-2020-11-23 11:54:10,285 INFO [http-nio-8070-exec-5] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：394
-2020-11-23 12:00:23,230 INFO [http-nio-8070-exec-10] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：356
+2021-04-08 14:38:36,694 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
+2021-04-08 14:38:41,515 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on lcydeMacBook-Pro.local with PID 37073 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
+2021-04-08 14:38:41,516 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
+2021-04-08 14:38:41,576 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73bd03b3: startup date [Thu Apr 08 14:38:41 CST 2021]; root of context hierarchy
+2021-04-08 14:38:42,754 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
+2021-04-08 14:38:42,777 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
+2021-04-08 14:38:42,780 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
+2021-04-08 14:38:42,889 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
+2021-04-08 14:38:42,889 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1313 ms
+2021-04-08 14:38:42,995 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
+2021-04-08 14:38:43,000 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-08 14:38:43,002 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-08 14:38:43,002 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-04-08 14:38:43,002 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-08 14:38:43,107 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-04-08 14:38:43,339 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73bd03b3: startup date [Thu Apr 08 14:38:41 CST 2021]; root of context hierarchy
+2021-04-08 14:38:43,391 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
+2021-04-08 14:38:43,392 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
+2021-04-08 14:38:43,394 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-04-08 14:38:43,394 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-04-08 14:38:43,416 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-04-08 14:38:43,417 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-04-08 14:38:43,444 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-04-08 14:38:43,575 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
+2021-04-08 14:38:43,658 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
+2021-04-08 14:38:43,673 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
+2021-04-08 14:38:43,679 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
+2021-04-08 14:38:43,698 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
+2021-04-08 14:38:43,712 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
+2021-04-08 14:38:43,716 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 17.454 seconds (JVM running for 23.576)
+2021-04-08 14:38:45,989 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-04-08 14:38:45,990 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
+2021-04-08 14:38:46,006 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2021-04-08 14:38:54,433 ERROR [http-nio-8070-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:38:57,749 ERROR [http-nio-8070-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:39:04,113 ERROR [http-nio-8070-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:39:38,439 ERROR [http-nio-8070-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:39:46,166 ERROR [http-nio-8070-exec-7] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:39:57,258 ERROR [http-nio-8070-exec-10] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:40:11,651 ERROR [http-nio-8070-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:40:26,651 ERROR [http-nio-8070-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:40:57,830 ERROR [http-nio-8070-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:42:27,014 INFO [Thread-44] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73bd03b3: startup date [Thu Apr 08 14:38:41 CST 2021]; root of context hierarchy
+2021-04-08 14:42:27,020 INFO [Thread-44] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown
+2021-04-08 14:42:47,069 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 30] HV000001: Hibernate Validator 5.3.6.Final
+2021-04-08 14:42:51,960 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 48] Starting Application on lcydeMacBook-Pro.local with PID 37104 (/Users/zcy/code/ideaspace/xxl-generator-code/xxl-code-generator-admin/target/classes started by zcy in /Users/zcy/code/ideaspace/xxl-generator-code)
+2021-04-08 14:42:51,961 INFO [restartedMain] c.x.codegenerator.admin.Application [SpringApplication.java : 593] No active profile set, falling back to default profiles: default
+2021-04-08 14:42:52,002 INFO [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@262a79d: startup date [Thu Apr 08 14:42:52 CST 2021]; root of context hierarchy
+2021-04-08 14:42:53,273 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 89] Tomcat initialized with port(s): 8070 (http)
+2021-04-08 14:42:53,281 INFO [restartedMain] o.a.catalina.core.StandardService [DirectJDKLog.java : 179] Starting service [Tomcat]
+2021-04-08 14:42:53,281 INFO [restartedMain] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 179] Starting Servlet Engine: Apache Tomcat/8.5.23
+2021-04-08 14:42:53,350 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring embedded WebApplicationContext
+2021-04-08 14:42:53,350 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [EmbeddedWebApplicationContext.java : 276] Root WebApplicationContext: initialization completed in 1348 ms
+2021-04-08 14:42:53,454 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 190] Mapping servlet: 'dispatcherServlet' to [/]
+2021-04-08 14:42:53,457 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-08 14:42:53,458 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-08 14:42:53,458 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-04-08 14:42:53,458 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 258] Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-08 14:42:53,579 INFO [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer [FreeMarkerConfigurer.java : 127] ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-04-08 14:42:53,824 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@262a79d: startup date [Thu Apr 08 14:42:52 CST 2021]; root of context hierarchy
+2021-04-08 14:42:53,874 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/]}" onto public java.lang.String com.xxl.codegenerator.admin.controller.IndexController.index()
+2021-04-08 14:42:53,876 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/codeGenerate]}" onto public com.xxl.codegenerator.admin.model.ReturnT<java.util.Map<java.lang.String, java.lang.String>> com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(java.lang.String)
+2021-04-08 14:42:53,878 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-04-08 14:42:53,879 INFO [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-04-08 14:42:53,912 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-04-08 14:42:53,913 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-04-08 14:42:53,950 INFO [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-04-08 14:42:54,163 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java : 58] LiveReload server is running on port 35729
+2021-04-08 14:42:54,251 INFO [restartedMain] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 431] Registering beans for JMX exposure on startup
+2021-04-08 14:42:54,263 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Initializing ProtocolHandler ["http-nio-8070"]
+2021-04-08 14:42:54,270 INFO [restartedMain] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 179] Starting ProtocolHandler ["http-nio-8070"]
+2021-04-08 14:42:54,288 INFO [restartedMain] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 179] Using a shared selector for servlet write/read
+2021-04-08 14:42:54,302 INFO [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer [TomcatEmbeddedServletContainer.java : 201] Tomcat started on port(s): 8070 (http)
+2021-04-08 14:42:54,308 INFO [restartedMain] c.x.codegenerator.admin.Application [StartupInfoLogger.java : 57] Started Application in 17.573 seconds (JVM running for 23.807)
+2021-04-08 14:42:57,973 INFO [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 179] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-04-08 14:42:57,974 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 489] FrameworkServlet 'dispatcherServlet': initialization started
+2021-04-08 14:42:57,989 INFO [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 508] FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2021-04-08 14:44:26,722 ERROR [http-nio-8070-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java : 181] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.] with root cause
+com.xxl.codegenerator.admin.core.exception.CodeGenerateException: Table structure anomaly.
+	at com.xxl.codegenerator.admin.core.util.TableParseUtil.processTableIntoClassInfo(TableParseUtil.java:149)
+	at com.xxl.codegenerator.admin.core.CodeGeneratorTool.processTableIntoClassInfo(CodeGeneratorTool.java:23)
+	at com.xxl.codegenerator.admin.controller.IndexController.codeGenerate(IndexController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-08 14:46:56,844 INFO [http-nio-8070-exec-2] c.x.c.a.controller.IndexController [IndexController.java : 83] 生成代码行数：356
+2021-04-08 16:16:03,474 INFO [Thread-44] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java : 984] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@262a79d: startup date [Thu Apr 08 14:42:52 CST 2021]; root of context hierarchy
+2021-04-08 16:16:03,589 INFO [Thread-44] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 449] Unregistering JMX-exposed beans on shutdown

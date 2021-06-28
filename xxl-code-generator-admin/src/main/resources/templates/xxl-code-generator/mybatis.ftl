@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="${daoPackage}.${classInfo.className}Dao">
 
-    <resultMap id="${classInfo.className}Mapper" type="${domainPackage}.${classInfo.className}Domain" >
+    <resultMap id="${classInfo.className}Mapper" type="${domainPackage}.${classInfo.className}" >
         <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
             <#list classInfo.fieldList as fieldItem >
                 <result column="${fieldItem.columnName}" property="${fieldItem.fieldName}" jdbcType="${fieldItem.jdbcType}" />
@@ -19,7 +19,7 @@
         </#if>
     </sql>
 
-    <insert id="insert" parameterType="${domainPackage}.${classInfo.className}Domain" >
+    <insert id="insert" parameterType="${domainPackage}.${classInfo.className}" >
         INSERT INTO ${classInfo.tableName}
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
@@ -52,7 +52,7 @@
         WHERE `id` = ${r"#{id}"}
     </delete>
 
-    <update id="update" parameterType="${domainPackage}.${classInfo.className}Domain" >
+    <update id="update" parameterType="${domainPackage}.${classInfo.className}" >
         UPDATE ${classInfo.tableName}
         <set>
             <#list classInfo.fieldList as fieldItem >
@@ -72,7 +72,7 @@
         WHERE `id` = ${r"#{id}"}
     </select>
 
-    <select id="find${classInfo.className}List" parameterType="${domainPackage}.${classInfo.className}Domain" resultMap="${classInfo.className}Mapper">
+    <select id="find${classInfo.className}List" parameterType="${domainPackage}.${classInfo.className}" resultMap="${classInfo.className}Mapper">
         SELECT <include refid="Base_Column_List" />
         FROM ${classInfo.tableName}
         <where>
