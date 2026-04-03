@@ -125,7 +125,7 @@ public class TableParseUtil {
                     } else if (columnLine.startsWith("datetime") || columnLine.startsWith("timestamp")) {
                         fieldClass = Date.class.getSimpleName();
                         jdbcType="TIMESTAMP";
-                    } else if (columnLine.startsWith("varchar") || columnLine.startsWith("text") || columnLine.startsWith("")) {
+                    } else if (columnLine.startsWith("varchar") || columnLine.startsWith("text") || columnLine.startsWith("longtext")) {
                         fieldClass = String.class.getSimpleName();
                         jdbcType="VARCHAR";
                     } else if (columnLine.startsWith("decimal")) {
