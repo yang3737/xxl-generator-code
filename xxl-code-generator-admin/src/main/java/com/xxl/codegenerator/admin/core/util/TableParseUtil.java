@@ -8,6 +8,7 @@ import com.xxl.codegenerator.admin.core.model.FieldInfo;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -25,9 +26,6 @@ public class TableParseUtil {
      * @return
      */
     public static ClassInfo processTableIntoClassInfo(String tableSql) throws IOException {
-        if (tableSql==null || tableSql.trim().length()==0) {
-            throw new CodeGenerateException("Table structure can not be empty.");
-        }
         tableSql = tableSql.trim();
 
         // table Name
@@ -39,7 +37,6 @@ public class TableParseUtil {
         } else {
             throw new CodeGenerateException("Table structure anomaly.");
         }
-
         if (tableName.contains("`")) {
             tableName = tableName.substring(tableName.indexOf("`")+1, tableName.lastIndexOf("`"));
         }
@@ -51,7 +48,7 @@ public class TableParseUtil {
         }
 
         // class Comment
-        String classComment = null;
+        String classComment = "";
         if (tableSql.contains("COMMENT=")) {
             String classCommentTmp = tableSql.substring(tableSql.lastIndexOf("COMMENT=")+8).trim();
             if (classCommentTmp.contains("'") || classCommentTmp.indexOf("'")!=classCommentTmp.lastIndexOf("'")) {
@@ -63,7 +60,7 @@ public class TableParseUtil {
         }
 
         // field List
-        List<FieldInfo> fieldList = new ArrayList<FieldInfo>();
+        List<FieldInfo> fieldList = new ArrayList<>();
 
         String fieldListTmp = tableSql.substring(tableSql.indexOf("(")+1, tableSql.lastIndexOf(")"));
 
@@ -80,7 +77,19 @@ public class TableParseUtil {
             }
         }
 
+        // remove invalid data
+        for (Pattern pattern: Arrays.asList(
+                Pattern.compile("[\\s]*PRIMARY KEY .*(\\),|\\))"),      // remove PRIMARY KEY
+                Pattern.compile("[\\s]*UNIQUE KEY .*(\\),|\\))"),       // remove UNIQUE KEY
+                Pattern.compile("[\\s]*KEY .*(\\),|\\))")               // remove KEY
+        )) {
+            Matcher patternMatcher = pattern.matcher(fieldListTmp);
+            while(patternMatcher.find()){
+                fieldListTmp = fieldListTmp.replace(patternMatcher.group(),"");
+            }
+        }
 
+        // collect column
         String[] fieldLineList = fieldListTmp.split(",");
         if (fieldLineList.length > 0) {
             for (String columnLine :fieldLineList) {
@@ -98,7 +107,7 @@ public class TableParseUtil {
                     }
 
                     // field class
-                    columnLine = columnLine.substring(columnLine.indexOf("`")+1).trim();	// int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+                    columnLine = columnLine.substring(columnLine.indexOf("`")+1).trim().toLowerCase();	// int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
                     String fieldClass = Object.class.getSimpleName();
                     String jdbcType="";
                     if (columnLine.startsWith("int") || columnLine.startsWith("tinyint") || columnLine.startsWith("smallint")) {
@@ -125,10 +134,10 @@ public class TableParseUtil {
                     }
 
                     // field comment
-                    String fieldComment = null;
-                    if (columnLine.contains("COMMENT")) {
-                        String commentTmp = fieldComment = columnLine.substring(columnLine.indexOf("COMMENT")+7).trim();	// '用户ID',
-                        if (commentTmp.contains("'") || commentTmp.indexOf("'")!=commentTmp.lastIndexOf("'")) {
+                    String fieldComment = "";
+                    if (columnLine.contains("comment")) {
+                        String commentTmp = columnLine.substring(columnLine.indexOf("comment")+7).trim();	// '用户ID',
+                        if (commentTmp.contains("'") && commentTmp.indexOf("'")!=commentTmp.lastIndexOf("'")) {
                             commentTmp = commentTmp.substring(commentTmp.indexOf("'")+1, commentTmp.lastIndexOf("'"));
                         }
                         fieldComment = commentTmp;
@@ -145,15 +154,17 @@ public class TableParseUtil {
             }
         }
 
-        if (fieldList.size() < 1) {
+        if (fieldList.isEmpty()) {
             throw new CodeGenerateException("Table structure anomaly.");
         }
 
+        // result
         ClassInfo codeJavaInfo = new ClassInfo();
         codeJavaInfo.setTableName(tableName);
         codeJavaInfo.setClassName(className);
         codeJavaInfo.setClassComment(classComment);
         codeJavaInfo.setFieldList(fieldList);
+
         return codeJavaInfo;
     }
 

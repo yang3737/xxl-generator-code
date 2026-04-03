@@ -1,3 +1,4 @@
+package ${domainPackage};
 <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
     <#list classInfo.fieldList as fieldItem >
         <#if fieldItem.fieldClass == "Date">
@@ -16,7 +17,7 @@ import lombok.Data;
 *  @date: created in '${.now?string('yyyy-MM-dd HH:mm:ss')}'
 */
 @Data
-public class ${classInfo.className} implements Serializable {
+public class ${classInfo.className?remove_beginning("Biz")}DTO implements Serializable {
 
 <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
 <#list classInfo.fieldList as fieldItem >
