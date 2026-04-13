@@ -110,7 +110,7 @@ public class TableParseUtil {
                     columnLine = columnLine.substring(columnLine.indexOf("`")+1).trim().toLowerCase();	// int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
                     String fieldClass = Object.class.getSimpleName();
                     String jdbcType="";
-                    if (columnLine.startsWith("int") || columnLine.startsWith("tinyint") || columnLine.startsWith("smallint")) {
+                    if (columnLine.startsWith("int") || columnLine.startsWith("tinyint") || columnLine.startsWith("smallint") || columnLine.startsWith("mediumint") || columnLine.startsWith("bit")) {
                         fieldClass = Integer.class.getSimpleName();
                         jdbcType="INTEGER";
                     } else if (columnLine.startsWith("bigint")) {
@@ -122,7 +122,7 @@ public class TableParseUtil {
                     } else if (columnLine.startsWith("double")) {
                         fieldClass = Double.class.getSimpleName();
                         jdbcType="DECIMAL";
-                    } else if (columnLine.startsWith("datetime") || columnLine.startsWith("timestamp")) {
+                    } else if (columnLine.startsWith("datetime") || columnLine.startsWith("timestamp") || columnLine.startsWith("date")) {
                         fieldClass = Date.class.getSimpleName();
                         jdbcType="TIMESTAMP";
                     } else if (columnLine.startsWith("varchar") || columnLine.startsWith("text") || columnLine.startsWith("longtext")) {
