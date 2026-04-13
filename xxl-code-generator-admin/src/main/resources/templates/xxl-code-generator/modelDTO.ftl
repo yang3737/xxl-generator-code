@@ -17,7 +17,7 @@ import lombok.Data;
 *  @date: created in '${.now?string('yyyy-MM-dd HH:mm:ss')}'
 */
 @Data
-public class ${classInfo.className}DTO {
+public class ${classInfo.className}DO {
 
 <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
 <#list classInfo.fieldList as fieldItem >
