@@ -20,7 +20,7 @@ import lombok.Data;
 */
 @Data
 @Table(name = "${classInfo.tableName}")
-public class ${classInfo.className?remove_beginning("Biz")}DO implements Serializable {
+public class ${classInfo.className?remove_beginning("Experts")}DO implements Serializable {
 
 <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
 <#list classInfo.fieldList as fieldItem >

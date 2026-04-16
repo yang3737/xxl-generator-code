@@ -29,9 +29,9 @@ public class IndexController {
     @Resource
     private FreemarkerTool freemarkerTool;
 
-    private String domainPackage="cn.gov.zcy.expert.infrastructure.repository.dictionary.domain";
+    private String domainPackage="cn.gov.zcy.expert.infrastructure.repository.config.domain";
 
-    private String daoPackage="cn.gov.zcy.expert.infrastructure.repository.dictionary.mapper";
+    private String daoPackage="cn.gov.zcy.expert.infrastructure.repository.config.mapper";
 
     @RequestMapping("/")
     public String index() {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="${daoPackage}.${classInfo.className?remove_beginning("Biz")}Mapper">
+<mapper namespace="${daoPackage}.${classInfo.className?remove_beginning("Experts")}Mapper">
 
-    <resultMap id="${classInfo.className?remove_beginning("Biz")}DOMapper" type="${domainPackage}.${classInfo.className?remove_beginning("Biz")}DO" >
+    <resultMap id="${classInfo.className?remove_beginning("Experts")}DOMapper" type="${domainPackage}.${classInfo.className?remove_beginning("Experts")}DO" >
         <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
             <#list classInfo.fieldList as fieldItem >
                 <result column="${fieldItem.columnName}" property="${fieldItem.fieldName}" jdbcType="${fieldItem.jdbcType}" />
@@ -19,7 +19,7 @@
         </#if>
     </sql>
 
-    <insert id="insert" parameterType="${domainPackage}.${classInfo.className?remove_beginning("Biz")}DO" >
+    <insert id="insert" parameterType="${domainPackage}.${classInfo.className?remove_beginning("Experts")}DO" >
         INSERT INTO ${classInfo.tableName}
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
@@ -52,7 +52,7 @@
         WHERE `id` = ${r"#{id}"}
     </delete>
 
-    <update id="update" parameterType="${domainPackage}.${classInfo.className?remove_beginning("Biz")}DO" >
+    <update id="update" parameterType="${domainPackage}.${classInfo.className?remove_beginning("Experts")}DO" >
         UPDATE ${classInfo.tableName}
         <set>
             <#list classInfo.fieldList as fieldItem >
@@ -66,13 +66,13 @@
     </update>
 
 
-    <select id="selectById" parameterType="java.lang.Long" resultMap="${classInfo.className?remove_beginning("Biz")}DOMapper">
+    <select id="selectById" parameterType="java.lang.Long" resultMap="${classInfo.className?remove_beginning("Experts")}DOMapper">
         SELECT <include refid="Base_Column_List" />
         FROM ${classInfo.tableName}
         WHERE `id` = ${r"#{id}"}
     </select>
 
-    <select id="find${classInfo.className?remove_beginning("Biz")}List" parameterType="${domainPackage}.${classInfo.className?remove_beginning("Biz")}DO" resultMap="${classInfo.className?remove_beginning("Biz")}DOMapper">
+    <select id="find${classInfo.className?remove_beginning("Experts")}List" parameterType="${domainPackage}.${classInfo.className?remove_beginning("Experts")}DO" resultMap="${classInfo.className?remove_beginning("Experts")}DOMapper">
         SELECT <include refid="Base_Column_List" />
         FROM ${classInfo.tableName}
         <where>
